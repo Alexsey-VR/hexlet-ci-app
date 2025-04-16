@@ -1,0 +1,10 @@
+on: push
+
+jobs:
+  setup-test-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: make setup
+      - run: make test
+      - run: lint
+    
