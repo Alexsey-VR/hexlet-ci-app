@@ -1,9 +1,10 @@
+name: ci-setup-test-lint
 on: push
-
 jobs:
-  setup-test-lint:
+  build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: make setup
       - run: make test
       - run: make lint
